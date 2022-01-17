@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "cursedadditions:cobbled_cobblestone"
+  },
+  "result": "cursedadditions:cobbled_stone",
+  "experience": 0.4,
+  "cookingtime": 250
+}

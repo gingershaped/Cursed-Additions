@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "cursedadditions:blocks/smooth_furnace/top",
+    "front": "cursedadditions:blocks/smooth_furnace/front_off",
+    "side": "cursedadditions:blocks/smooth_furnace/side"
+  }
+}

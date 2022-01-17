@@ -1,0 +1,16 @@
+{ 
+	"type": "minecraft:crafting_shaped",
+	"pattern": [ 
+		" #",
+		"# "
+	],
+	"key": {
+		"#": { 
+			"item": "minecraft:cobblestone"
+		}
+	},
+	"result": { 
+		"item": "cursedadditions:cobblestone_stick",
+		"count": 4
+	}
+}

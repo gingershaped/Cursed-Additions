@@ -1,0 +1,13 @@
+{
+	"item.dream_disc": {
+			"category": "item",
+			"subtitle": "Fast",
+			"sounds": [
+				{
+					"name": "cursedadditions:items/discs/fast",
+					"stream": true
+				}
+			]
+		
+		}
+}

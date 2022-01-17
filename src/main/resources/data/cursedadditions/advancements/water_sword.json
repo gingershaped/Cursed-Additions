@@ -1,0 +1,38 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Fight Fire with Water",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Deflect a fireball with the Water Sword"
+        },
+        "icon": {
+            "item": "cursedadditions:water_sword"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "Deflect a fireball with the Water Sword": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:fireball",
+                    "equipment": {
+                        "mainhand": {
+                            "item": "cursedadditions:water_sword"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "experience": 30
+    },
+    "parent": "cursedadditions:root"
+}

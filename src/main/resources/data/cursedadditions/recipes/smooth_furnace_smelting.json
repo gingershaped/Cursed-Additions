@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:furnace"
+  },
+  "result": "cursedadditions:smooth_furnace",
+  "experience": 0.4,
+  "cookingtime": 250
+}

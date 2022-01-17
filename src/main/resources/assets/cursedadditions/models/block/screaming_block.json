@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "cursedadditions:blocks/screaming_block/top",
+    "front": "cursedadditions:blocks/screaming_block/front",
+    "side": "cursedadditions:blocks/screaming_block/side",
+    "bottom": "cursedadditions:blocks/screaming_block/bottom"
+  }
+}

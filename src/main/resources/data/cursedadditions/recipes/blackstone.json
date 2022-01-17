@@ -1,0 +1,16 @@
+{ 
+	"type": "minecraft:crafting_shaped",
+	"pattern": [ 
+		"###",
+		"###",
+		"###"
+	],
+	"key": {
+		"#": { 
+			"item": "cursedadditions:blackstone_dust"
+		}
+	},
+	"result": { 
+		"item": "minecraft:blackstone"
+	}
+}

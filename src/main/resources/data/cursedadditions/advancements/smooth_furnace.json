@@ -1,0 +1,30 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Efficiency First"
+        },
+        "description": {
+            "text": "Craft a Smooth Furnace"
+        },
+        "icon": {
+            "item": "cursedadditions:smooth_furnace"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "c1": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "cursedadditions:smooth_furnace"
+            }
+        }
+    },
+    "rewards": {
+        "experience": 5
+    },
+    "parent": "cursedadditions:root"
+}

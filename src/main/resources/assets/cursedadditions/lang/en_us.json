@@ -1,0 +1,25 @@
+{
+	"itemGroup.cursedTab": "Cursed Additions",
+	
+	"item.cursedadditions.blackstone_dust": "Blackstone Dust",
+	"item.cursedadditions.cobblestone_dust": "Cobblestone Dust",
+	 
+	"item.cursedadditions.fferfi": "Fferfi",
+	"item.cursedadditions.cooked_flesh": "Cooked Flesh",
+	"item.cursedadditions.vertical_bread": "Vertical Bread",
+	
+	"item.cursedadditions.cobblestone_stick": "Cobblestone Stick",
+	"item.cursedadditions.water_sword": "Water Sword",
+	
+	"item.cursedadditions.dream_disc": "Music Disc",
+	"item.cursedadditions.dream_disc.desc": "Unknown - Fast",
+	
+	
+	"block.cursedadditions.cobbled_cobblestone": "Cobbled Cobblestone",
+	"block.cursedadditions.cobbled_stone": "Cobbled Cobblestone",
+	"block.cursedadditions.interesting_block": "Interesting Block",
+	
+	"block.cursedadditions.smooth_furnace": "Smooth Furnace",
+	
+	"container.cursedadditions.smooth_furnace": "Smooth Furnace"
+}

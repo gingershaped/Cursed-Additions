@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cursedadditions:block/screaming_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cursedadditions:block/screaming_block"
+    },
+    "facing=south": {
+      "model": "cursedadditions:block/screaming_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cursedadditions:block/screaming_block",
+      "y": 270
+    }
+  }
+}
