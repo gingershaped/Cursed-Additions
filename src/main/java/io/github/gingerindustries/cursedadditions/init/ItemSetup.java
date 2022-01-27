@@ -4,15 +4,19 @@ import io.github.gingerindustries.cursedadditions.CursedAdditions;
 import io.github.gingerindustries.cursedadditions.discs.DreamDiscItem;
 import io.github.gingerindustries.cursedadditions.items.food.CookedFleshItem;
 import io.github.gingerindustries.cursedadditions.items.food.FferfiItem;
+import io.github.gingerindustries.cursedadditions.items.food.FixedSpawnEggItem;
 import io.github.gingerindustries.cursedadditions.items.food.VerticalBreadItem;
 import io.github.gingerindustries.cursedadditions.items.weapons.CobblestoneStickItem;
 import io.github.gingerindustries.cursedadditions.items.weapons.WaterSwordItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+@Mod.EventBusSubscriber(modid = CursedAdditions.ID, bus = Bus.MOD)
 public class ItemSetup {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CursedAdditions.ID);
 
@@ -28,6 +32,8 @@ public class ItemSetup {
     public static final RegistryObject<Item> WATER_SWORD = ITEMS.register("water_sword", () -> new WaterSwordItem());
     // Discs
     public static final RegistryObject<Item> DREAM_DISC = ITEMS.register("dream_disc", () -> new DreamDiscItem());
+    // Spawn eggs
+    public static final RegistryObject<Item> SUSPICIOUS_CREATURE_SPAWN_EGG = ITEMS.register("suspicious_creature_spawn_egg", () -> new FixedSpawnEggItem(EntityTypeSetup.SUSPICIOUS_ENTITY, 14421539, 2158564, new Item.Properties().tab(CursedAdditions.TAB)));
     
     // BlockItems
     public static final RegistryObject<Item> COBBLED_COBBLESTONE_ITEM = ITEMS.register("cobbled_cobblestone",

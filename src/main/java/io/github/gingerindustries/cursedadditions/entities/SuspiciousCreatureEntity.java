@@ -18,8 +18,7 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 
 public class SuspiciousCreatureEntity extends MonsterEntity {
-	public static final AttributeModifierMap MAP = AttributeModifierMap.builder().add(Attributes.MAX_HEALTH, 10.0D).add(Attributes.MOVEMENT_SPEED, 0.2F).add(Attributes.FOLLOW_RANGE, 16.0F)
-			.build();
+
 
 	public SuspiciousCreatureEntity(EntityType<? extends MonsterEntity> p_i48553_1_, World p_i48553_2_) {
 		super(p_i48553_1_, p_i48553_2_);
@@ -38,7 +37,7 @@ public class SuspiciousCreatureEntity extends MonsterEntity {
 
 	
 	public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-        return MonsterEntity.createMonsterAttributes().add(Attributes.MAX_HEALTH, 10.0D).add(Attributes.MOVEMENT_SPEED, 0.2F).add(Attributes.FOLLOW_RANGE, 16.0F);
+        return MonsterEntity.createMonsterAttributes().add(Attributes.MAX_HEALTH, 10.0D).add(Attributes.FOLLOW_RANGE, 16.0F);
     }
 
 

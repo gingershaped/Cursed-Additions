@@ -38,11 +38,11 @@ public class CursedAdditions {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(CursedRenderers::register);
         
+        EntityTypeSetup.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         BlockSetup.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ItemSetup.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         SoundSetup.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         TileEntitySetup.TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        EntityTypeSetup.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
