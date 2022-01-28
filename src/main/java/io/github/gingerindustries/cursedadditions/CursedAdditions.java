@@ -11,11 +11,9 @@ import io.github.gingerindustries.cursedadditions.init.EntityTypeSetup;
 import io.github.gingerindustries.cursedadditions.init.ItemSetup;
 import io.github.gingerindustries.cursedadditions.init.SoundSetup;
 import io.github.gingerindustries.cursedadditions.init.TileEntitySetup;
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -86,14 +84,9 @@ public class CursedAdditions {
     @Mod.EventBusSubscriber(modid=ID, bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            //LOGGER.info("HELLO from Register Block");
-        }
-        @SubscribeEvent
         public static void entityAttributeCreationEvent(EntityAttributeCreationEvent event) {
         	LOGGER.info("Entity attributes created");
-    		event.put(EntityTypeSetup.SUSPICIOUS_ENTITY.get(), SuspiciousCreatureEntity.createMonsterAttributes().build());
+    		event.put(EntityTypeSetup.SUSPICIOUS_ENTITY.get(), SuspiciousCreatureEntity.setCustomAttributes().build());
     	}
     }
     
