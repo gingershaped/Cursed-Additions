@@ -86,7 +86,7 @@ public class CursedAdditions {
         @SubscribeEvent
         public static void entityAttributeCreationEvent(EntityAttributeCreationEvent event) {
         	LOGGER.info("Entity attributes created");
-    		event.put(EntityTypeSetup.SUSPICIOUS_ENTITY.get(), SuspiciousCreatureEntity.setCustomAttributes().build());
+    		event.put(EntityTypeSetup.SUSPICIOUS_CREATURE_ENTITY.get(), SuspiciousCreatureEntity.setCustomAttributes().build());
     	}
     }
     

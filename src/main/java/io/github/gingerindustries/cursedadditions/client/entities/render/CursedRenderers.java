@@ -13,7 +13,7 @@ public class CursedRenderers {
 
 	@SubscribeEvent
     public static void register(final FMLClientSetupEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(EntityTypeSetup.SUSPICIOUS_ENTITY.get(),
+		RenderingRegistry.registerEntityRenderingHandler(EntityTypeSetup.SUSPICIOUS_CREATURE_ENTITY.get(),
                 renderManager -> new SuspiciousCreatureRenderer(renderManager)
         );
     }

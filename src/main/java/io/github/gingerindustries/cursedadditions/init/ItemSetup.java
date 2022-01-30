@@ -33,7 +33,7 @@ public class ItemSetup {
     // Discs
     public static final RegistryObject<Item> DREAM_DISC = ITEMS.register("dream_disc", () -> new DreamDiscItem());
     // Spawn eggs
-    public static final RegistryObject<Item> SUSPICIOUS_CREATURE_SPAWN_EGG = ITEMS.register("suspicious_creature_spawn_egg", () -> new FixedSpawnEggItem(EntityTypeSetup.SUSPICIOUS_ENTITY, 14421539, 2158564, new Item.Properties().tab(CursedAdditions.TAB)));
+    public static final RegistryObject<Item> SUSPICIOUS_CREATURE_SPAWN_EGG = ITEMS.register("suspicious_creature_spawn_egg", () -> new FixedSpawnEggItem(EntityTypeSetup.SUSPICIOUS_CREATURE_ENTITY, 14421539, 2158564, new Item.Properties().tab(CursedAdditions.TAB)));
     
     // BlockItems
     public static final RegistryObject<Item> COBBLED_COBBLESTONE_ITEM = ITEMS.register("cobbled_cobblestone",
