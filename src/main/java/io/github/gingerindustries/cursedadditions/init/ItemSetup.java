@@ -23,6 +23,7 @@ public class ItemSetup {
     // Items
     public static final RegistryObject<Item> BLACKSTONE_DUST = ITEMS.register("blackstone_dust", () -> new Item(new Item.Properties().tab(CursedAdditions.TAB)));
     public static final RegistryObject<Item> COBBLESTONE_DUST = ITEMS.register("cobblestone_dust", () -> new Item(new Item.Properties().tab(CursedAdditions.TAB)));
+    public static final RegistryObject<Item> INTERESTING_SHARD = ITEMS.register("interesting_shard", () -> new Item(new Item.Properties().tab(CursedAdditions.TAB)));
     // Food items
     public static final RegistryObject<Item> FFERFI = ITEMS.register("fferfi", () -> new FferfiItem());
     public static final RegistryObject<Item> COOKED_FLESH = ITEMS.register("cooked_flesh", () -> new CookedFleshItem());
@@ -42,6 +43,8 @@ public class ItemSetup {
             () -> new BlockItem(BlockSetup.COBBLED_STONE_BLOCK.get(), new Item.Properties().tab(CursedAdditions.TAB)));
     public static final RegistryObject<Item> INTERESTING_BLOCK_ITEM = ITEMS.register("interesting_block",
             () -> new BlockItem(BlockSetup.INTERESTING_BLOCK.get(), new Item.Properties().tab(CursedAdditions.TAB)));
+    public static final RegistryObject<Item> INTERESTING_ORE_ITEM = ITEMS.register("interesting_ore",
+            () -> new BlockItem(BlockSetup.INTERESTING_ORE.get(), new Item.Properties().tab(CursedAdditions.TAB)));
     
     public static final RegistryObject<Item> SMOOTH_FURNACE_ITEM = ITEMS.register("smooth_furnace",
             () -> new BlockItem(BlockSetup.SMOOTH_FURNACE_BLOCK.get(), new Item.Properties().tab(CursedAdditions.TAB)));

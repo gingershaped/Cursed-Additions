@@ -11,10 +11,12 @@ import io.github.gingerindustries.cursedadditions.init.EntityTypeSetup;
 import io.github.gingerindustries.cursedadditions.init.ItemSetup;
 import io.github.gingerindustries.cursedadditions.init.SoundSetup;
 import io.github.gingerindustries.cursedadditions.init.TileEntitySetup;
+import io.github.gingerindustries.cursedadditions.world.gen.OreGenSetup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -41,6 +43,8 @@ public class CursedAdditions {
         ItemSetup.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         SoundSetup.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         TileEntitySetup.TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGenSetup::generateOres);
         
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

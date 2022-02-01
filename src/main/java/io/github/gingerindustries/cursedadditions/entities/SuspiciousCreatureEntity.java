@@ -29,6 +29,7 @@ import net.minecraft.util.EntityPredicates;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.IServerWorld;
 import net.minecraft.world.World;
@@ -49,22 +50,21 @@ public class SuspiciousCreatureEntity extends MonsterEntity {
 		this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 	}
 
-	public Boolean getRandomHostility(IServerWorld world) {
-		if (MonsterEntity.isDarkEnoughToSpawn(world, this.blockPosition(), this.getRandom())) {
-			if (this.getRandom().nextInt(20) == 0) {
-				return true;
-			} else {
-				return false;
+	public Boolean getRandomHostility(IServerWorld world, DifficultyInstance difficulty, SpawnReason reason) {
+		if (difficulty.getDifficulty() != Difficulty.PEACEFUL && reason != SpawnReason.MOB_SUMMONED) {
+			if (MonsterEntity.isDarkEnoughToSpawn(world, this.blockPosition(), this.getRandom())) {
+				if (this.getRandom().nextInt(20) == 0) {
+					return true;
+				}
 			}
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	@Nullable
 	public ILivingEntityData finalizeSpawn(IServerWorld world, DifficultyInstance difficulty, SpawnReason reason,
 			@Nullable ILivingEntityData data, @Nullable CompoundNBT nbt) {
-		Boolean hostile = this.getRandomHostility(world);
+		Boolean hostile = this.getRandomHostility(world, difficulty, reason);
 		if (data instanceof SuspiciousCreatureData) {
 			hostile = ((SuspiciousCreatureEntity.SuspiciousCreatureData) data).isHostile;
 		} else {

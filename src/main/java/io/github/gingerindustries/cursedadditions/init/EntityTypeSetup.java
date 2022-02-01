@@ -4,8 +4,6 @@ import io.github.gingerindustries.cursedadditions.CursedAdditions;
 import io.github.gingerindustries.cursedadditions.entities.SuspiciousCreatureEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.item.Item;
-import net.minecraft.item.SpawnEggItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

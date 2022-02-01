@@ -1,4 +1,4 @@
-package io.github.gingerindustries.cursedadditions.world;
+package io.github.gingerindustries.cursedadditions.world.gen;
 
 import java.util.Arrays;
 import java.util.HashSet;

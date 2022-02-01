@@ -3,6 +3,7 @@
 	
 	"item.cursedadditions.blackstone_dust": "Blackstone Dust",
 	"item.cursedadditions.cobblestone_dust": "Cobblestone Dust",
+	"item.cursedadditions.interesting_shard": "Interesting Shard",
 	 
 	"item.cursedadditions.fferfi": "Fferfi",
 	"item.cursedadditions.cooked_flesh": "Cooked Flesh",
@@ -22,6 +23,7 @@
 	"block.cursedadditions.cobbled_cobblestone": "Cobbled Cobblestone",
 	"block.cursedadditions.cobbled_stone": "Cobbled Cobblestone",
 	"block.cursedadditions.interesting_block": "Interesting Block",
+	"block.cursedadditions.interesting_ore": "Interesting Ore",
 	
 	"block.cursedadditions.smooth_furnace": "Smooth Furnace",
 	
