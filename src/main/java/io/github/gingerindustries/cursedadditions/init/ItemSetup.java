@@ -7,6 +7,7 @@ import io.github.gingerindustries.cursedadditions.items.food.FferfiItem;
 import io.github.gingerindustries.cursedadditions.items.food.FixedSpawnEggItem;
 import io.github.gingerindustries.cursedadditions.items.food.VerticalBreadItem;
 import io.github.gingerindustries.cursedadditions.items.weapons.CobblestoneStickItem;
+import io.github.gingerindustries.cursedadditions.items.weapons.InterestingStaffItem;
 import io.github.gingerindustries.cursedadditions.items.weapons.WaterSwordItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -31,6 +32,7 @@ public class ItemSetup {
     // Weaponry
     public static final RegistryObject<Item> COBBLESTONE_STICK = ITEMS.register("cobblestone_stick", () -> new CobblestoneStickItem());
     public static final RegistryObject<Item> WATER_SWORD = ITEMS.register("water_sword", () -> new WaterSwordItem());
+    public static final RegistryObject<Item> INTERESTING_STAFF = ITEMS.register("interesting_staff", () -> new InterestingStaffItem());
     // Discs
     public static final RegistryObject<Item> DREAM_DISC = ITEMS.register("dream_disc", () -> new DreamDiscItem());
     // Spawn eggs

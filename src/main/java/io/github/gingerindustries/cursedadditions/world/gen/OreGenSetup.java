@@ -17,7 +17,7 @@ public class OreGenSetup {
 	public static void generateOres(final BiomeLoadingEvent event) {
 		if (!(event.getCategory().equals(Biome.Category.NETHER) || event.getCategory().equals(Biome.Category.THEEND))) {
 			generateOre(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-					BlockSetup.INTERESTING_ORE.get().defaultBlockState(), 3, 15, 30, 3);
+					BlockSetup.INTERESTING_ORE.get().defaultBlockState(), 4, 15, 30, 5);
 		}
 	}
 
