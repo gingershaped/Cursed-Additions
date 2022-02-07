@@ -3,14 +3,16 @@ package io.github.gingerindustries.cursedadditions.items.weapons;
 import io.github.gingerindustries.cursedadditions.CursedAdditions;
 import io.github.gingerindustries.cursedadditions.client.items.render.InterestingStaffRenderer;
 import net.minecraft.enchantment.IVanishable;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
@@ -61,9 +63,15 @@ public class InterestingStaffItem extends Item implements IVanishable, IAnimatab
 		Vector3d c1 = new Vector3d(p.x-RADIUS, p.y, p.z-RADIUS);
 		Vector3d c2 = new Vector3d(p.x+RADIUS, p.y+1, p.z+RADIUS);
 		AxisAlignedBB box = new AxisAlignedBB(c1, c2);
-		for (LivingEntity entity : world.getLoadedEntitiesOfClass(LivingEntity.class, box)) {
-			Vector3d mag = p.subtract(entity.position()).normalize().scale(Math.min(RADIUS - p.distanceTo(entity.position()), 0));
-			entity.hurt(DamageSource.playerAttack(player), (float) Math.min(RADIUS - p.distanceTo(entity.position()), 0));
+		
+		world.playSound(player, player, SoundEvents.BEACON_POWER_SELECT, SoundCategory.BLOCKS, 0.5f, 1.0f);
+		player.getCooldowns().addCooldown(this, 60);
+		if (!player.isCreative()) {
+			this.setDamage(player.getItemInHand(hand), this.getDamage(player.getItemInHand(hand)) + 1);
+		}
+		
+		for (MonsterEntity entity : world.getLoadedEntitiesOfClass(MonsterEntity.class, box)) {
+			Vector3d mag = p.subtract(entity.position()).normalize().scale(Math.min(RADIUS - p.distanceToSqr(entity.position()), 0));
 			entity.push(mag.x, mag.y, mag.z);
 		}
 		return ActionResult.success(player.getItemInHand(hand));
